@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,
+								initial-scale=1.0">
+	<title>Crypto Tracker</title>
+	<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header class="bg-black text-white py-4 mb-4">
+		<div class="container text-center">
+			<h1>Crypto Track</h1>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="input-group mb-4">
+			<input type="text" id="searchInput"
+				class="form-control"
+				placeholder="Search cryptocurrencies..." style="border-radius: 15px;background-color: rgb(42, 38, 38);">
+			<!-- <div class="input-group-append">
+				<button class="btn btn-primary"
+						type="button" id="searchButton">
+				Search</button>
+			</div> -->
+		</div>
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Logo</th>
+						<th>Name</th>
+						<th>Symbol</th>
+						<th>Price</th>
+						<th>Price Change</th>
+						<th>24h Volume</th>
+						<th>Market Cap</th>
+					</tr>
+				</thead>
+				<tbody id="cryptoTable">
+					<!-- Cryptocurrency details will be 
+						inserted here dynamically using JavaScript -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- <footer class="bg-dark text-white py-4 mt-4">
+		<div class="container text-center">
+			<p>© 2024 Cryptocurrency Portfolio Tracker</p>
+		</div>
+	</footer> -->
+
+	<script src=
+"https://code.jquery.com/jquery-3.5.1.slim.min.js">
+	</script>
+	<script src=
+"https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
+	</script>
+	<script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	</script>
+	<script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAVtrdnKEEJ-PqSJdFbYHz6ahqIElBwGkk",
+          authDomain: "cryptotracker-ad699.firebaseapp.com",
+          projectId: "cryptotracker-ad699",
+          storageBucket: "cryptotracker-ad699.appspot.com",
+          messagingSenderId: "719949602401",
+          appId: "1:719949602401:web:a5e8ccefe6297ee380d420",
+          measurementId: "G-R20ZZNRK9F"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+
+</html>
